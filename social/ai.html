@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有想法的橙子 - AI 聊天</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/ai.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="./"><i class="fas fa-compass"></i>发现</a></li>
+            <li><a href=""><i class="fas fa-users"></i>社交</a></li>
+            <li class="now"><a href="ai.html"><i class="fas fa-robot"></i>AI</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>AI助手对话</h2>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <!-- 聊天消息将在这里显示 -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="输入您的问题...">
+                <button id="sendButton">发送</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/common.js"></script>
+    <script src="js/ai-chat.js"></script>
+</body>
+</html>

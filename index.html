@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有想法的橙子 - 首页</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <section class="introduction">
+        <h1 style="margin: 0;">有想法的橙子</h1>
+        <p>1234567890</p>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+    
+    <main>
+        <section class="portfolio" id="portfolio">
+            <h2>我的作品集</h2>
+            <div class="portfolio-items">
+                <div class="portfolio-item">
+                    <img src="img/image.png" alt="作品1">
+                    <h3>作品1</h3>
+                    <p>这是作品1的简短描述。</p>
+                    <a href="#details1" class="button">查看详情</a>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/image.png" alt="作品2">
+                    <h3>作品2</h3>
+                    <p>这是作品2的简短描述。</p>
+                    <a href="#details2" class="button">查看详情</a>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/image.png" alt="作品3">
+                    <h3>作品3</h3>
+                    <p>这是作品3的简短描述。</p>
+                    <a href="#details3" class="button">查看详情</a>
+                </div>
+            </div>
+        </section>
+
+        <h2 id="before-contact">联系我</h2>
+        <section id="contact" class="contact-form">
+            <form id="contactForm">
+                <label for="name">姓名</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">邮箱</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">消息</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="button">发送消息</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <i class="fas fa-check-circle"></i>
+            <p>消息发送成功！</p>
+            <button id="closeModal">关闭</button>
+        </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // 直接显示成功模态框
+        var modal = document.getElementById('successModal');
+        modal.style.display = 'block';
+        
+        // 不立即重置表单
+        // this.reset();
+    });
+
+    document.getElementById('closeModal').addEventListener('click', function() {
+        var modal = document.getElementById('successModal');
+        modal.style.display = 'none';
+        
+        // 在关闭模态框时重置表单
+        document.getElementById('contactForm').reset();
+    });
+
+    // 点击模态框外部时关闭模态框
+    window.onclick = function(event) {
+        var modal = document.getElementById('successModal');
+        if (event.target == modal) {
+            modal.style.display = 'none';
+            document.getElementById('contactForm').reset();
+        }
+    }
+    </script>
+</body>
+</html>

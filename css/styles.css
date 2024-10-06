@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f1f5f9;
+}
+
+header {
+    position: fixed; /* 固定在顶部 */
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.7); /* 毛玻璃效果 */
+    backdrop-filter: blur(10px); /* 背景模糊 */
+    color: #333;
+    height: 55px; /* 设置固定高度 */
+    padding: 0 1rem; /* 只保留左右内边距 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999; /* 确保在其他内容之上 */
+}
+
+.logo a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    margin: 0; /* 移除默认的外边距 */
+    height: 100%; /* 使导航栏填满header的高度 */
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 0.8rem; /* 减小了内边距 */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFA500; /* 橙色 */
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.auth a {
+    color: white;
+    text-decoration: none;
+    background-color: #FFA500; /* 橙色 */
+    padding: 0.5rem 0.8rem; /* 减小了内边距 */
+    border-radius: 4px;
+    margin-left: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.auth a:hover {
+    background-color: #FF8C00; /* 深橙色，用于悬停效果 */
+}
+
+main {
+    margin: auto;
+    margin-top: 55px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 10px 2rem 0; 
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    z-index: 2;
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 30px 0;
+    width: 100vw;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left {
+    flex: 2;
+}
+.footer-center {
+    flex: 1;
+}
+
+.footer-right {
+    flex: 0.2;
+}
+
+.footer-left p, .footer-center p, .footer-right p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-center ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-center ul li {
+    margin-bottom: 5px;
+}
+
+.footer-center ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
