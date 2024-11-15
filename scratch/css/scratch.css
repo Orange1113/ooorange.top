@@ -1,0 +1,218 @@
+.scratch-intro {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #ff8c00, #ff4500);
+    color: white;
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
+}
+
+.scratch-intro h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.scratch-intro p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.scratch-projects {
+    padding: 40px 20px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.project-info p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.play-button {
+    background-color: #ff8c00;
+    color: white;
+}
+
+.play-button:hover {
+    background-color: #ff7300;
+}
+
+.view-code {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.view-code:hover {
+    background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .scratch-intro {
+        padding: 40px 20px;
+    }
+    
+    .scratch-intro h1 {
+        font-size: 2em;
+    }
+}
+
+.quick-links-section {
+    padding: 40px 20px;
+}
+
+.quick-links-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.links-table {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.link-row {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr) 160px;
+    padding: 20px;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    gap: 15px;
+}
+
+.link-row:last-child {
+    border-bottom: none;
+}
+
+.link-row:hover {
+    background-color: #f8f8f8;
+}
+
+.platform-name {
+    font-weight: bold;
+    color: #ff8c00;
+}
+
+.platform-desc {
+    color: #666;
+    padding: 0 20px;
+}
+
+.platform-link {
+    text-align: right;
+    white-space: nowrap;
+    width: 160px;
+}
+
+.link-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    background-color: #ff8c00;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.link-button:hover {
+    background-color: #ff7300;
+}
+
+@media (max-width: 768px) {
+    .link-row {
+        grid-template-columns: 100px minmax(0, 1fr) 160px;
+        padding: 15px;
+    }
+
+    .platform-name {
+        font-size: 1.1em;
+    }
+
+    .platform-desc {
+        padding: 0 10px;
+        font-size: 0.9em;
+    }
+
+    .platform-link {
+        text-align: right;
+    }
+}
+
+@media (max-width: 576px) {
+    .link-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .platform-link {
+        text-align: left;
+        width: auto;
+    }
+} 
